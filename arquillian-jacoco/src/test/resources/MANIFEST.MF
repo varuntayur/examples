@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: tayur
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 11.0.2
+dependencies: io.netty export, org.apache.httpcomponents export, org.d
+ om4j export, org.javassist export,org.jboss.remote-naming export, org
+ .jboss.resteasy.resteasy-jackson-provider export, org.codehaus.jettis
+ on export, org.jboss.resteasy.resteasy-jaxrs export, org.codehaus.jac
+ kson.jackson-mapper-asl export,jdk.unsupported export
+

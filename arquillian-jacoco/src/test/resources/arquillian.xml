@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://jboss.org/schema/arquillian http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+    <container qualifier="wildfly16" default="true">
+        <configuration>
+            <property name="jbossHome">target/wildfly-16.0.0.Final</property>
+            <property name="serverConfig">standalone-full.xml</property>
+      		<property name="javaVmArguments">-Djboss.socket.binding.port-offset=13000 -Xms512m -Xmx1024m -Xrunjdwp:transport=dt_socket,address=8799,server=y,suspend=n --add-modules=java.se ${jacoco.agent}</property>
+      		<property name="managementPort">22990</property>
+            <property name="startupTimeoutInSeconds">${startup.timeout:180}</property>
+        </configuration>
+    </container>
+    
+</arquillian>
